@@ -1,0 +1,104 @@
+# Install Runestone VM on VirtualBox
+
+## Account Information of this VM
+
+- User name: `runestone`
+- Password: `aaa`
+
+## Preparation 
+
+Before installing the Runestone VM, be sure to do the following:
+
+- Install [VirtualBox](https://www.virtualbox.org/). 
+The VM has been tested on Version `Version 6.1.22`.
+
+- Download the zip file `Runestone.zip` from  
+[here](), unzip it, 
+and you will get a `.vdi` file. This file contains the pre-built Runestone 
+Ubuntu 20.04 image. This document shows how to build a virtual machine
+using this image. 
+
+
+## Step 1: Create a New VM in VirtualBox
+
+We need to use `New` to create a new virtual machine.
+
+![New VM](./imgs/vm-new.png)
+
+## Step 2: Provide a Name and Select the OS Type and Version
+
+Our prebuilt Ubuntu 20.04 VM is 64-bit, so pick Ubuntu (64-bit). 
+
+![name and OS type](./imgs/vm-name-type.png)
+
+## Step 3: Set the Memory Size
+
+We need to allocate dedicated memory for the VM. 
+1024 MB may be sufficient, but we recommend 2048 MB. If your computer has more 
+RAM, you can increase accordingly. The more memory you give to the VM, 
+the better the performance you will get.
+
+![memory](./imgs/vm-memory.png)
+
+## Step 4: Select the Pre-built VM File that is Provided
+
+Click the folder image. On the popup window, use
+the `Add` button to select the `.vdi` file downloaded.  
+
+![choose vdi](./imgs/vm-hard-disk.png)
+
+## Step 5: Configure the VM
+
+After the previous step, your VM will be created, and you will
+see it on VirtualBox's VM panel. We need to do some further 
+configuration. Right-click the M, click
+the `Settings` option, and we will see the Settings window.
+
+![finished](./imgs/vm-setting.png)
+
+
+### Step 5.a: Enable Copy and Paste
+
+Go to the `General` category, and select the `Advanced` tab. 
+Select `Bidirectional` for both items. The first item allows users to copy
+and paste between the VM and the host computer 
+The second item allows users
+to transfer files between the VM and the host computer using Drag'n Drop (this 
+feature is not always reliable).
+
+![general](./imgs/vm-setting-general.png)
+
+The copy-and-paste feature is hugely useful. If you can't do copy and paste, 
+chances are that you forgot to do this step, but you can still do it later
+by selecting the `Devices` menu item, and you will see the 
+`Shared Clipboard` submenu. 
+
+### Step 5.b: CPUs 
+
+Go to the `System` category, and select the `Processor` tab. 
+Assign number of CPUs to this VM if you prefer. Although may be sufficient,
+if the performance seems to be an issue, increase the number. 
+
+![CPU cores](./imgs/vm-setting-system.png)
+
+## Appendix A: Start the VM and Take Snapshot 
+
+We can now start the VM. You can also use the `Take` button to take a snapshot 
+of your VM. This way, if something goes wrong, you can roll back the state of
+your VM using the saved snapshots. 
+
+![display](./imgs/vm-start.png)
+
+## Appendix B: Stop the VM
+
+There are many ways to stop the VM. ONe good way is to use the `Save State`. This
+is different from shutting down the VM. It saves the current VM state, so next time
+when you restart the VM, the state will be recovered. Moreover, the speed is also
+faster than booting up a VM from shutdown.
+
+![display](./imgs/vm-stop.png)
+
+
+
+
+
